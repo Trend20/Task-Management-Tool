@@ -1,8 +1,8 @@
-## Task Management Tool
+# Task Management Tool
 
-# If you are a daily todo person, you can create this app for others to manage thier daily tasks.
+### If you are a daily todo person, you can create this app for others to manage thier daily tasks.
 
-### In this application, Users can
+#### In this application, Users can
 
     Login/Register to the application
     Add daily tasks for themselves
