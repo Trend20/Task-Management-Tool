@@ -7,6 +7,18 @@ const User = require('../models/User');
 // LOGIN
 router.route('/login').post((req, res) =>{
   const email = req.body.email;
+  const password = req.body.password;
+
+  const newUser = new User({email, password});
+
+  newUser.save()
+         .then(() => res.json('User logged in'))
+         .catch(error => res.status(400).json('Error ' + error))
+})
+
+// SIGNUP
+router.route('/signup').post((req, res) =>{
+  const email = req.body.email;
   const username = req.body.username;
   const password = req.body.password;
 
@@ -15,7 +27,6 @@ router.route('/login').post((req, res) =>{
   newUser.save()
          .then(() => res.json('User logged in'))
          .catch(error => res.status(400).json('Error ' + error))
-})
-
+});
 
 module.exports = router;
